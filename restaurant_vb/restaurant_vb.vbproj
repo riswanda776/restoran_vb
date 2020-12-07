@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89AD64B0-2052-409E-BE6A-BF488C656C4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>restaurant_vb.My.MyApplication</StartupObject>
+    <RootNamespace>restaurant_vb</RootNamespace>
+    <AssemblyName>restaurant_vb</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>restaurant_vb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>restaurant_vb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="service\kontrol\MasakanControl.vb" />
+    <Compile Include="service\kontrol\pelangganControl.vb" />
+    <Compile Include="service\kontrol\transaksi\controlTransaksi.vb" />
+    <Compile Include="ui\formLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="service\koneksi\modConnection.vb" />
+    <Compile Include="service\kontrol\controlJenisMasakan.vb" />
+    <Compile Include="ui\kasir\dialogBayar.Designer.vb">
+      <DependentUpon>dialogBayar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\dialogBayar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\kasir\dialogPilihMasakan.Designer.vb">
+      <DependentUpon>dialogPilihMasakan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\dialogPilihMasakan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\kasir\dialogPilihPelanggan.Designer.vb">
+      <DependentUpon>dialogPilihPelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\dialogPilihPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\kasir\formMasakan.Designer.vb">
+      <DependentUpon>formMasakan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\formMasakan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\kasir\formMain.Designer.vb">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\formMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\kasir\formTransaksi.Designer.vb">
+      <DependentUpon>formTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\formTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\kasir\pelangganForm.Designer.vb">
+      <DependentUpon>pelangganForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\kasir\pelangganForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\manajer\formManajer.Designer.vb">
+      <DependentUpon>formManajer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ui\manajer\formManajer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ui\formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\dialogBayar.resx">
+      <DependentUpon>dialogBayar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\dialogPilihMasakan.resx">
+      <DependentUpon>dialogPilihMasakan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\dialogPilihPelanggan.resx">
+      <DependentUpon>dialogPilihPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\formMasakan.resx">
+      <DependentUpon>formMasakan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\formMain.resx">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\formTransaksi.resx">
+      <DependentUpon>formTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\kasir\pelangganForm.resx">
+      <DependentUpon>pelangganForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\manajer\formManajer.resx">
+      <DependentUpon>formManajer.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
